@@ -14,10 +14,11 @@ function popFront (arr) {
     num = arr[0];
     for(i =0;i < arr.length-1; i++){
         arr[i] = arr[i+1];
-        arr.length = arr.length-1;
+        
     }
+    arr.pop();
     console.log(arr);
     console.log(num);
 }
 
-popFront([0,5,10,15])
+//popFront([0,5,10,15])
