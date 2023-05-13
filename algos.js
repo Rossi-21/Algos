@@ -1,3 +1,9 @@
+
+//Current Assinment is at the bottom of the page. Good Luck!
+//-Ross
+
+
+
 var myNumber = 42;
 var myName = "Ross";
 var temp = myName;
@@ -81,7 +87,7 @@ function print(incoming){
 
 //print(42);
 
-
+//Array's ToDo
 function pushFront (arr, num) {
     for(var i = arr.length; i > 0; i--) {
         arr[i] = arr[i-1];  
@@ -95,7 +101,7 @@ function pushFront (arr, num) {
 //pushFront([99], 7);
 
 function popFront (arr) {
-    num = arr[0];
+    var num = arr[0];
     for(i =0;i < arr.length-1; i++){
         arr[i] = arr[i+1];
         
@@ -108,14 +114,37 @@ function popFront (arr) {
 //popFront([0,5,10,15])
 
 function insertAt(arr, index, num) {
-    for(i = 0; i < arr.length; i++){
-      if(i == index){
-        temp = arr[i];
-        arr[i] = num;
-        arr[i+1] = temp;
-      }
-}
+    arr.push(num);
+    console.log(arr);
+    var temp = arr[arr.length-1];
+    console.log(temp);
+    arr[arr.length-1] = arr[index];
+    arr[index] = temp;
+
     console.log(arr);
 }
 //insertAt([100,200,5], 2, 311);
 //insertAt([9,33,7], 0, 42);
+
+//STRING TODO
+
+function removeBlanks(string){
+    var arr = string.split(" ");
+    var newString = arr.join("");
+    console.log(newString);
+}
+
+//removeBlanks(" Pl ayTha tF u nkyM usi c ");
+
+function getDigits(string){
+    for(i = string.length-1; i >= 0; i--){
+        if(isNaN(string[i])){
+            string = string.replace(string[i],"");  
+        }   
+     }
+    var num = Number(string)
+    console.log(num);
+}
+
+//getDigits("abc8c0d1ngd0j0!8");
+//getDigits("0s1a3y5w7h9a2t4?6!8?0");
