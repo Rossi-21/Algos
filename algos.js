@@ -134,7 +134,7 @@ function removeBlanks(string){
     console.log(newString);
 }
 
-//removeBlanks(" Pl ayTha tF u nkyM usi c ");
+removeBlanks(" Pl ayTha tF u nkyM usi c ");
 
 function getDigits(string){
     for(i = string.length-1; i >= 0; i--){
@@ -146,5 +146,46 @@ function getDigits(string){
     console.log(num);
 }
 
-//getDigits("abc8c0d1ngd0j0!8");
-//getDigits("0s1a3y5w7h9a2t4?6!8?0");
+getDigits("abc8c0d1ngd0j0!8");
+getDigits("0s1a3y5w7h9a2t4?6!8?0");
+
+function acronym(string){
+    var arr1 = string.split(" ");
+    var arr2 = [];
+    for(i = 0; i < arr1.length; i++){
+        arr2.push(arr1[i][0]);    
+        }
+        var newString1 = arr2.join("");
+        var newString2 = newString1.toUpperCase();
+        console.log(newString2);
+    }
+
+acronym(" there's no free lunch - gotta pay yer way. ");
+acronym("Live from New York, it's Saturday Night!");
+
+function countNonSpaces(string){
+    var sum = 0;
+    var newArr = string.split("");
+    for (i = 0; i < newArr.length; i ++){
+        if(newArr[i] != " "){
+            sum++;
+        }
+    } 
+    console.log(sum);
+}
+
+countNonSpaces("Honey pie, you are driving me crazy");
+countNonSpaces("Hello world !");
+
+function removeShorterStrings(arr, num){
+    newArr = []
+    for (i = 0; i < arr.length; i++){
+        if(arr[i].length >= num){
+            newArr.push(arr[i]);
+        }
+    }
+    console.log(newArr);
+}
+
+removeShorterStrings(['Good morning', 'sunshine', 'the', 'Earth', 'says', 'hello'], 4); 
+removeShorterStrings(['There', 'is', 'a', 'bug', 'in', 'the', 'system'], 3)
