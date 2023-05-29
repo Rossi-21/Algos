@@ -134,7 +134,7 @@ function removeBlanks(string){
     console.log(newString);
 }
 
-removeBlanks(" Pl ayTha tF u nkyM usi c ");
+//removeBlanks(" Pl ayTha tF u nkyM usi c ");
 
 function getDigits(string){
     for(i = string.length-1; i >= 0; i--){
@@ -146,8 +146,8 @@ function getDigits(string){
     console.log(num);
 }
 
-getDigits("abc8c0d1ngd0j0!8");
-getDigits("0s1a3y5w7h9a2t4?6!8?0");
+//getDigits("abc8c0d1ngd0j0!8");
+//getDigits("0s1a3y5w7h9a2t4?6!8?0");
 
 function acronym(string){
     var arr1 = string.split(" ");
@@ -160,8 +160,8 @@ function acronym(string){
         console.log(newString2);
     }
 
-acronym(" there's no free lunch - gotta pay yer way. ");
-acronym("Live from New York, it's Saturday Night!");
+//acronym(" there's no free lunch - gotta pay yer way. ");
+//acronym("Live from New York, it's Saturday Night!");
 
 function countNonSpaces(string){
     var sum = 0;
@@ -174,8 +174,8 @@ function countNonSpaces(string){
     console.log(sum);
 }
 
-countNonSpaces("Honey pie, you are driving me crazy");
-countNonSpaces("Hello world !");
+//countNonSpaces("Honey pie, you are driving me crazy");
+//countNonSpaces("Hello world !");
 
 function removeShorterStrings(arr, num){
     newArr = []
@@ -187,5 +187,42 @@ function removeShorterStrings(arr, num){
     console.log(newArr);
 }
 
-removeShorterStrings(['Good morning', 'sunshine', 'the', 'Earth', 'says', 'hello'], 4); 
-removeShorterStrings(['There', 'is', 'a', 'bug', 'in', 'the', 'system'], 3)
+// removeShorterStrings(['Good morning', 'sunshine', 'the', 'Earth', 'says', 'hello'], 4); 
+//removeShorterStrings(['There', 'is', 'a', 'bug', 'in', 'the', 'system'], 3)
+
+function minToFront1(arr){
+    min = arr[0];
+    console.log("min =", min)
+    console.log(arr);
+    
+    //find min
+    for(var i = arr.length; i > 0; i--){
+        if (arr[i] < min){
+            min = arr[i]; 
+        }
+        for(var i = arr.length; i > 0; i--){
+            arr[i] = arr[i-1];
+        }
+    }
+    console.log("min =", min);
+        //move min to front
+        arr[0] = min;
+        console.log(arr);
+}
+minToFront([4,2,1,3,5])
+function minToFront(arr) {
+    var min = arr[0];
+    var idx = 0;
+    for (var i = 1; i < arr.length; i++){
+        if (arr[i] < min) {
+            min = arr[i];
+            idx = i;
+        }
+    }
+    for (var x = idx; x > 0; x--){
+        var temp = arr[x];
+        arr[x] = arr[x-1];
+        arr[x-1] = temp;
+    }
+    return arr;
+}
