@@ -240,4 +240,15 @@ var twoSum = function(nums, target) {
     }   
 };
 
-console.log(twoSum([3,2,4],6))
+//console.log(twoSum([3,2,4],6))
+
+var isPalindrome = function(x) {
+    var numString = x.toString();
+
+    for(var i = 0; i < numString.length/2; i++){
+        if(numString[i]!= numString[numString.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true
+}
