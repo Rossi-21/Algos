@@ -86,3 +86,56 @@ for(i = 1; i < 101; i++){
         //console.log(i)
     }
 }
+
+//Your function will be given an input parameter incoming. Please console.log this value.
+ function printMe(input){
+    return input
+ }
+
+//console.log(printMe("Hello World"))
+
+//Add odd integers from -300,000 to 300,000, 
+//and console.log the final sum. Is there a shortcut?
+    sum = 0
+    for (var i = -299999;i <= 299999; i+=2){
+        sum = sum + i    
+    }
+    //console.log(sum)
+    
+    //Log positive numbers starting at 2016, 
+    //counting down by fours (exclude 0), without a FOR loop.
+    num = 2017
+    while(num >= 0){
+        num--
+        if (num % 4 == 0){
+            //console.log(num)
+        }
+    }
+
+    //Based on earlier “Countdown by Fours”, 
+    //given lowNum, highNum, mult, 
+    //print multiples of mult from highNum down to lowNum,
+    //using a FOR. For (2,9,3), print 9 6 3 (on successive lines).
+
+function countDown(lowNum,highNum,mult){
+    for( i = highNum; i > lowNum; i -- ){
+        if (i % mult == 0){
+            console.log(i)
+        }
+    }
+}
+
+//countDown(2,9,3)
+
+function finalCountDown(mult,lowNum,highNum,skip){
+    for( i = lowNum; i < highNum; i ++ ){
+        if(i == skip){
+            continue
+        }
+        if (i % mult == 0){
+            console.log(i)
+        }
+    }
+}
+
+finalCountDown(3,5,17,9)
