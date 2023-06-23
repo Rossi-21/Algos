@@ -138,4 +138,66 @@ function finalCountDown(mult,lowNum,highNum,skip){
     }
 }
 
-finalCountDown(3,5,17,9)
+//finalCountDown(3,5,17,9)
+
+//Create a function that accepts a number as an input. 
+//Return a new array that counts down by one, 
+//from the number (as array’s ‘zeroth’ element) down to 0 (as the last element).
+//How long is this array?
+
+function createArray(num){
+ arr = []
+    for(var i = num; i >= 0; i--){
+        arr.push(i)
+    }
+    return arr
+}
+//console.log(createArray(10))
+
+//Your function will receive an array with two numbers. 
+//Print the first value, and return the second.
+
+function printReturn([num1,num2]){
+    console.log(num1)
+    return num2
+}
+
+//console.log(printReturn([1,2]))
+
+//Given an array, return the sum of the first value in the array, plus the array’s length. 
+//What happens if the array’s first value is not a number, but a string (like "what?") or a boolean (like false).
+
+function firstPlusLength(arr){
+    num = arr[0] + arr.length
+
+    return num
+}
+
+//console.log(firstPlusLength(["one",2,3,4,5]))
+
+function returnGreater(arr){
+    num = 0
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > arr[1]){
+            console.log(arr[i])
+            num++ 
+        }
+    }  
+    return "num = " + num    
+}
+
+//console.log(returnGreater([1,3,5,7,9,13]))
+
+function returnGreater2(arr){
+    num = 0
+    arr2 = []
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > arr[1]){
+            arr2.push(arr[i])
+            num++ 
+        }
+    }  
+    console.log(arr2)
+    return "num = " + num    
+}
+console.log(returnGreater2([1,3,5,7,9,13]))
