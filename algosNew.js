@@ -200,4 +200,61 @@ function returnGreater2(arr){
     console.log(arr2)
     return "num = " + num    
 }
-console.log(returnGreater2([1,3,5,7,9,13]))
+//console.log(returnGreater2([1,3,5,7,9,13]))
+
+//Given two numbers, return array of length num1 with each value num2. 
+//Print "Jinx!" if they are same.
+function thisLength(num1,num2){
+    arr=[]
+    if(num1 == num2){
+        console.log("Jinx!")
+    }
+    for(var i = 0; i < num1; i ++){
+        arr[i] = num2
+    }
+    return arr
+}
+
+//console.log(thisLength(5,9))
+
+//Your function should accept an array. 
+//If value at [0] is greater than array’s length, 
+//print "Too big!"; if value at [0] is less than array’s length, 
+//print "Too small!"; otherwise print "Just right!".
+
+function threeBears(arr){
+    
+    if(arr[0] > arr.length){
+        console.log('Too Big!')
+    }
+    if(arr[0] < arr.length){
+        console.log('Too small!')
+    }
+    if(arr[0] == arr.length){
+        console.log('Just right!')
+    }
+    
+}
+
+//threeBears([9,2,3])
+
+//Kelvin wants to convert between temperature scales. 
+//Create fahrenheitToCelsius(fDegrees) that accepts a number of degrees in Fahrenheit 
+//and returns the equivalent temperature as expressed in Celsius degrees. 
+//For review, Fahrenheit = (9/5 * Celsius) + 32.
+
+function fahrenheitToCelsius(fDegrees){
+    cDegrees = (fDegrees - 32) * 5 / 9
+
+    console.log(fDegrees + "f = " + cDegrees + "c" )
+}
+
+//fahrenheitToCelsius(92)
+
+function celsiusToFahrenheit(c){
+    f = (c * 9/5) + 32
+
+    console.log(c + "C = " + f + "F")
+}
+
+celsiusToFahrenheit(32)
