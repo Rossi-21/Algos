@@ -246,7 +246,7 @@ function threeBears(arr){
 function fahrenheitToCelsius(fDegrees){
     cDegrees = (fDegrees - 32) * 5 / 9
 
-    console.log(fDegrees + "f = " + cDegrees + "c" )
+    console.log(fDegrees + "F = " + cDegrees + "C" )
 }
 
 //fahrenheitToCelsius(92)
@@ -257,4 +257,68 @@ function celsiusToFahrenheit(c){
     console.log(c + "C = " + f + "F")
 }
 
-celsiusToFahrenheit(32)
+//celsiusToFahrenheit(32)
+
+//Given an array, write a function that changes all positive numbers in the array to “big”.
+
+function posToNeg(arr){
+    for (i = 0; i < arr.length; i++){
+        if( arr[i] > 0){
+            arr[i] = "big"
+        }
+    }
+    return arr
+}
+
+//console.log(posToNeg([-3,5,-2,9]))
+
+//Create a function that takes an array of numbers. 
+//The function should print the lowest value in the array, and return the highest value in the array.
+
+function lowToHigh(arr){
+    lowNum = arr[0]
+    highNum = arr[0]
+    for(i=0;i<arr.length;i++){
+        if(arr[i]<lowNum){
+            lowNum = arr[i]
+        }
+        if(arr[i]>highNum){
+            highNum = arr[i]  
+        }
+    }
+    console.log('low = ' + lowNum)
+    return("high = " + highNum)
+}
+
+//console.log(lowToHigh([6,13,1,12]))
+
+//Build a function that takes an array of numbers. 
+//The function should print the second-to-last value in the array, 
+//and return first odd value in the array.
+
+function odd(arr){
+    oddNum = arr[0]
+    console.log(arr[arr.length-2])
+    for(i = 0; i < arr.length; i++){
+        if(arr[i] % 2 != 0){
+            oddNum = arr[i]
+            break
+        }
+    }
+    return oddNum
+}
+
+//console.log(odd([2,4,4,6,7,9]))
+
+//Given an array, create a function to return a new array where 
+//each value in the original has been doubled. 
+//Calling double([1,2,3]) should return [2,4,6] without changing original.
+
+function double(arr){
+    for(i = 0; i < arr.length; i++){
+        arr[i] *= 2
+    }
+    return arr
+}
+
+console.log(double([1,3,6,3]))
