@@ -321,4 +321,94 @@ function double(arr){
     return arr
 }
 
-console.log(double([1,3,6,3]))
+//console.log(double([1,3,6,3]))
+
+//Given an array of numbers, create a function to replace last value with the number of positive values. 
+//Example,  countPositives([-1,1,1,1]) changes array to [-1,1,1,3] and returns it.
+
+function replacePos(arr){
+    num = 0
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] > 0){
+            num++
+        }
+        arr[arr.length - 1] = num
+    }
+    return arr
+}
+
+//console.log(replacePos([-1,1,1,1,1]))
+
+//Create a function that accepts an array. 
+//Every time that array has three odd values in a row, 
+//print "That’s odd!" Every time the array has three evens in a row, print "Even more so!"
+
+function evenOdd(arr){
+    for(var i = 0;i < arr.length;i++){
+        if(arr[i] % 2 === 0 && arr[i-1]  % 2 === 0 && arr[i-2] % 2 === 0){
+            console.log("Even more so!");
+        }
+        else if(arr[i] % 2 === 1 && arr[i-1] % 2 === 1 && arr[i-2] % 2 === 1){
+            console.log("That's odd!");
+        }
+    }
+}
+
+//evenOdd([1,1,1])
+
+function checkArray(arr) {
+    for (let i = 2; i < arr.length; i++) {
+        if (arr[i] % 2 === 1 && arr[i - 1] % 2 === 1 && arr[i - 2] % 2 === 1) {
+            console.log("That's odd!");
+        } else if (arr[i] % 2 === 0 && arr[i - 1] % 2 === 0 && arr[i - 2] % 2 === 0) {
+            console.log("Even more so!");
+        }
+    }
+}
+
+//checkArray([1,1,1])
+
+//Given arr, add 1 to odd elements ([1], [3], etc.), console.log all values and return arr.
+
+function oddPlus1(arr){
+    for(var i = 0;i < arr.length;i++){
+        if(arr[i] % 2 == 1){
+            arr[i] = arr[i] + 1
+        }
+    }
+    return arr
+}
+//console.log(oddPlus1([1,2,4,5,3]))
+
+//You are passed an array containing strings. 
+//Working within that same array, replace each string with a number – 
+//the length of the string at previous array index – and return the array.
+
+function replaceString(arr){
+    str = ''
+    for(var i = 1;i < arr.length; i++){
+        str = arr[i -1]
+        arr[i] = str.length
+    }
+    return arr     
+}
+
+//console.log(replaceString(['here','we','go','again']))
+
+//Build a function that accepts an array. 
+//Return a new array with all values except first, adding 7 to each. 
+//Do not alter the original array.
+
+function add7(arr){
+    newArr = []
+    for(var i = 1; i < arr.length; i++){
+        newArr.push(arr[i])
+    }
+    console.log(arr)
+    for(var i = 0; i < newArr.length; i++){
+        newArr[i] = newArr[i] + 7
+    }
+    return newArr
+}
+
+console.log(add7([1,3,14,3,21]))
