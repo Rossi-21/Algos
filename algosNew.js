@@ -411,4 +411,20 @@ function add7(arr){
     return newArr
 }
 
-console.log(add7([1,3,14,3,21]))
+//console.log(add7([1,3,14,3,21]))
+
+//Given array, write a function to reverse values, in-place. 
+//Example: reverse([3,1,6,4,2]) returns same array, containing [2,4,6,1,3]
+
+function reverse(arr){
+    for(var i = 0; i < arr.length / 2; i++){
+        temp = arr[0]
+        arr[0] = arr[arr.length-1-i]
+        arr[arr.length-1-i] = temp
+    }
+    
+    
+    return arr
+}
+
+console.log(reverse([1,2,3,4,5]))
