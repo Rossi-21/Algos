@@ -427,4 +427,26 @@ function reverse(arr){
     return arr
 }
 
-console.log(reverse([1,2,3,4,5]))
+//console.log(reverse([1,2,3,4,5]))
+
+//Given an array, create and return a new one containing all the values of the provided array, 
+//made negative (not simply multiplied by -1). Given [1,-3,5], return [-1,-3,-5].
+
+function madeNagative(arr){
+    var newArr= []
+    for (var i = 0; i < arr.length; i++){
+        console.log("test " + arr[i])
+        if(arr[i] < 0){
+            newArr.push(arr[i])
+        }
+        else if(arr[i] > 0){
+            arr[i] = -arr[i]
+            console.log("New " + arr[-i])
+            newArr.push(arr[i])
+        }
+        console.log(newArr)
+
+    }     
+}
+
+madeNagative([1,2,-3,4])
