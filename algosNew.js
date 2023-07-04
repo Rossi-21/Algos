@@ -449,4 +449,52 @@ function madeNagative(arr){
     }     
 }
 
-madeNagative([1,2,-3,4])
+//madeNagative([1,2,-3,4])
+
+//Create a function that accepts an array, and prints "yummy" each time one of the values is equal to "food". 
+//If no array elements are "food", then print "I'm hungry" once.
+
+function hungry(arr){
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] === "food"){
+            console.log('Yummy!')
+        }
+        else{
+            console.log("I'm Hungry")
+        }
+    }
+}
+
+//hungry(["food",1,6,'food','not food',3,'food'])
+
+//Given array, swap first and last, third and third-tolast, etc. 
+//Input[true,42,"Ada",2,"pizza"] becomes ["pizza",42,"Ada",2,true].  
+//Change [1,2,3,4,5,6] to [6,2,4,3,5,1].
+
+function swapEven(arr){
+    temp = 0
+    for(var i = 0; i < arr.length/2; i++){
+        if ( i % 2 == 0){
+            j = arr.length-1-i
+            temp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = temp
+        }
+    }
+    return arr
+}
+
+console.log(swapEven([1,2,3,4,5,6]))
+
+function reverseArr(arr){
+    temp = 0
+    for(var i = 0; i < arr.length/2; i++){
+        j = arr.length-1-i
+        temp = arr[i]
+        arr[i] = arr[j]
+        arr[j] = temp
+    }
+    return arr
+}
+
+//console.log(reverseArr([true,42,"Ada",2,"pizza"]))
