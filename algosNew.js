@@ -484,7 +484,7 @@ function swapEven(arr){
     return arr
 }
 
-console.log(swapEven([1,2,3,4,5,6]))
+//console.log(swapEven([1,2,3,4,5,6]))
 
 function reverseArr(arr){
     temp = 0
@@ -498,3 +498,15 @@ function reverseArr(arr){
 }
 
 //console.log(reverseArr([true,42,"Ada",2,"pizza"]))
+
+//Given array arr and number num, multiply each arr value by num, 
+//and return the changed arr.
+
+function timesNum(arr, num){
+    for(var i = 0;i < arr.length; i++){
+        arr[i] = arr[i] * num
+    }
+    return arr
+}
+
+console.log(timesNum([2,4,6,8], 2))
