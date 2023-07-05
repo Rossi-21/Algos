@@ -509,4 +509,20 @@ function timesNum(arr, num){
     return arr
 }
 
-console.log(timesNum([2,4,6,8], 2))
+//console.log(timesNum([2,4,6,8], 2))
+
+//Given array arr and number X, remove all except the last X elements, 
+//and return arr (changed and shorter). 
+//Given ([2,4,6,8,10],3), change the given array to [6,8,10] and return it.
+
+function lastFew(arr,x){
+    for(var i = 0; arr.length > x; i++){
+        for(var j = 0; j < arr.length-1; j++){
+            arr[j] = arr[j+1]
+        } 
+        arr.pop() 
+    }
+    return arr
+}
+
+console.log(lastFew([1,2,3,4,5,6,2], 3))
