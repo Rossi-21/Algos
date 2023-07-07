@@ -525,4 +525,57 @@ function lastFew(arr,x){
     return arr
 }
 
-console.log(lastFew([1,2,3,4,5,6,2], 3))
+//console.log(lastFew([1,2,3,4,5,6,2], 3))
+
+//Cartman doesn’t really like math; he needs help. 
+//You are given two numbers – coefficients M and B in the equation Y = MX + B. 
+//Build a function to return the X-intercept 
+//(his older cousin Fiaz wisely reminds him that X-intercept is the value of 
+//X where Y equals zero; 
+//Cartman just snorts in his general direction).
+
+function intercept(M,B){
+    //Y = (M * X) + B
+}
+
+//Kenny tries to stay safe, but somehow everyday something happens. 
+//Out of the last 100 days, there were 10 days with volcanos, 15 others with tsunamis, 
+//20 earthquakes, 25 blizzards and 30 meteors (for 100 days total). 
+//If these probabilities continue, write whatHappensToday() to print a day’s outcome.
+
+function whatHappensToday(){
+
+}
+
+//Kyle (smarter than Kenny) notes that the chance of one disaster should be unrelated 
+//to the chance of another. Change whatHappensToday() function to create 
+//whatReallyHappensToday(). In this new function test for each disaster independently, 
+//instead of assuming exactly one disaster will happen. 
+//In other words, with this new function, all five might occur today – or none. 
+//Maybe Kenny will survive!
+
+function whatReallyHappensToday() {
+
+}
+
+//Your time at the Dojo will definitely make you smarter! 
+//Let’s say a new Dojo student, Bogdan entered with a modest IQ of 101. 
+//Let’s say that during a 14-week bootcamp, his IQ rose by .01 on the first day, 
+//then went up by an additional .02 on the second day, then up by .03 more on the third day, etc. 
+//all the way until increasing by .98 on his 98th day (the end of 14 full weeks). 
+//What is Bogdan’s final IQ?
+
+function finalIQ(){
+    IQ = 101
+    x = .01
+    for(i = 0; i < 99; i++){
+        IQ = IQ + x
+        console.log(IQ)
+        IQ++
+        x = x + 0.01
+        
+    }
+    return IQ
+}
+
+console.log(finalIQ())
