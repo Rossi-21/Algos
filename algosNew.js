@@ -591,18 +591,27 @@ function letterGrade(score){
     if (score < 60){
         console.log("Score: " + score + ". Grade: F")
     }
-    else if( score > 59 && score < 70){
-        console.log("Score: " + score + ". Grade: D")
+    else if( score > 59 && score < 65){
+        console.log("Score: " + score + ". Grade: D-")
     }
-    else if( score > 69 && score < 80){
-        console.log("Score: " + score + ". Grade: C")
+    else if( score > 64 && score < 70){
+        console.log("Score: " + score + ". Grade: D+")
     }
-    else if( score > 79 && score < 90){
-        console.log("Score: " + score + ". Grade: B")
+    else if( score > 69 && score < 75){
+        console.log("Score: " + score + ". Grade: C-")
+    }
+    else if( score > 74 && score < 80){
+        console.log("Score: " + score + ". Grade: C+")
+    }
+    else if( score > 79 && score < 85){
+        console.log("Score: " + score + ". Grade: B-")
+    }
+    else if( score > 84 && score < 90){
+        console.log("Score: " + score + ". Grade: B+")
     }
     else if( score > 89 && score <= 100){
         console.log("Score: " + score + ". Grade: A")
     }
 }
 
-letterGrade(74)
+letterGrade(89)
