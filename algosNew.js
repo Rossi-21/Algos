@@ -614,4 +614,73 @@ function letterGrade(score){
     }
 }
 
-letterGrade(89)
+//letterGrade(89)
+
+/*
+Implement function sigma(num) that given a number, 
+returns the sum of all positive integers up to number (inclusive). 
+Ex.: sigma(3) = 6 (or 1 + 2 + 3); sigma(5) = 15 (or 1 + 2 + 3 + 4 + 5).
+ */
+
+function sigma(num){
+    sum = 0
+    for (let i = 0; i < num; i++){
+        sum = sum + i
+    }
+    return sum
+    
+}
+
+//console.log(sigma(100))
+
+/*
+Just the Facts, ma’am. Factorials, that is. 
+Write a function factorial(num) that, given a number, 
+returns the product (multiplication) of all positive integers 
+from 1 up to number (inclusive). 
+
+For example, factorial(3) = 6 (or 1 * 2 * 3); 
+factorial(5) = 120 (or 1 * 2 * 3 * 4 * 5).
+*/
+
+function factorial(num){
+    sum = 1
+    for (let i = 1; i <= num; i++){
+        sum = sum * i
+    }
+    return sum
+    
+}
+
+//console.log(factorial(5))
+
+/*
+Write a function drawLeftStars(num) that accepts a number 
+and prints that many asterisks.
+*/
+
+function drawLeftStars(num){
+    let arr=[]
+    for(let i = 0; i < num; i++){
+        arr.push('*')
+    }
+    let str = arr.join('')
+    return str
+}
+
+//console.log(drawLeftStars(76))
+
+function drawRightStars(num){
+    let arr = []
+    for(let i = 0; i < 76; i++){
+        arr.push(' ')
+    }
+    end = arr.length - 1
+    for(let i = 0; i < num; i++){
+        arr[end] = '*'
+            end--  
+    }
+    let str = arr.join('')
+    return str
+}
+console.log(drawRightStars(12))

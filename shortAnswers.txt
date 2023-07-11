@@ -1,0 +1,45 @@
+What is source code?
+    the code that a computer runs to create an application.
+What makes computers so “smart”, anyway?
+    Computers are not smart. they can only do what you tell them. 
+    they are campaple of processing complex algorithems very quickly.
+What is the purpose of a programming language?
+    It's an interpreter between us and the computer or, 
+    a luanguage that we can use that the computer also understands.
+What are 3 examples of programming languages? Why are there so many of these?
+    Python, JavaScript, C++. they all have different strengths and weaknesses.
+What is a variable? Why are variables useful?
+    A location in memory. we tell the computer what that location holds 
+    so that we can access it whenever we need.
+What is the difference between a single-equals (=) and a double-equals (==)?
+    = sets a veriable, == determines equality
+What is the difference between a double-equals (==) and a triple-equals (===)?
+    == considers generally equality without considering type
+    === considers the type of the variable
+Why does the developer console exist?
+    It's a place where we can create, debug and test our apps
+When we talk about “conditional” statements, what does that mean? What is an example?
+    if/else statments are conditional. if this do that, if that do this. 
+    The computer will run code based on the conditions that we set.
+    if(x < y){
+        x++
+    }
+Why would we want FOR or WHILE loops in our source code?
+    For and while loops are how computers read lists.
+    A computer needs to be told how to read a list and we do this with loops
+What is a function? Why would we use functions?
+    A function is code that we can call on at anytime.
+    It's like a variable only more complex. Like an algorithm that we could use over and over.
+How many values can you receive back from a function? How many values can you send in?
+    you can console log as many values as you want, but a function will only return one value.
+    You can give a function as many parameters as you need.
+What is an array? How many values does it hold?
+    An array is a list of objects held in memory. it can be as long as it needs to be.
+What is a T-diagram and why should I know how to use one?
+    It is a hand written method used for solving complex functions or algorithems
+What are the two ways to comment JS code? When would you use one versus the other?
+    // short comment
+    /* Longer Comment */
+
+
+
