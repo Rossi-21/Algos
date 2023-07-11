@@ -668,7 +668,7 @@ function drawLeftStars(num){
     return str
 }
 
-//console.log(drawLeftStars(76))
+//console.log(drawLeftStars(3))
 
 function drawRightStars(num){
     let arr = []
@@ -683,4 +683,35 @@ function drawRightStars(num){
     let str = arr.join('')
     return str
 }
-console.log(drawRightStars(12))
+//console.log(drawRightStars(12))
+
+function drawCenteredStars(num){
+    let arr = []
+    let start = (76/2)
+    for(let i = 0; i < start; i++){
+        arr.push(' ')
+    }
+    center = arr.length - 1
+    for(let i = 0; i < num; i++){
+        arr[center] = '*'
+            center--  
+    }
+    for(let i = 0; i < 76 - (start + num);i++){
+        arr.push(' ')
+    }
+    let str = arr.join('')
+    return str
+}
+
+//console.log(drawCenteredStars(3))
+
+function drawLeftChar(num, char){
+    let arr=[]
+    for(let i = 0; i < num; i++){
+        arr.push(char)
+    }
+    let str = arr.join('')
+    return str
+}
+
+console.log(drawLeftChar(5,'$'))
