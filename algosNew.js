@@ -714,4 +714,67 @@ function drawLeftChar(num, char){
     return str
 }
 
-console.log(drawLeftChar(5,'$'))
+//console.log(drawLeftChar(5,'$'))
+
+/*Create threesFives() that adds values from 100 and 4,000,000 (inclusive) 
+if that value is evenly divisible by 3 or 5 but not both. 
+Display the final sum in the console. */
+
+function threeFives(){
+    sum = 0
+    for(let i = 100; i < 4000001; i++){
+        if (i % 3 == 0 && i % 5 == 0){
+            continue
+        }
+        if (i % 3 == 0){
+            sum = sum + i
+        }
+        if (i % 5 == 0){
+            sum = sum + i
+        }
+    }
+    return sum
+}
+
+//console.log(threeFives())
+
+function betterThreeFives(start, end){
+    sum = 0
+    for(let i = start; i < end+1; i++){
+        if (i % 3 == 0 && i % 5 == 0){
+            continue
+        }
+        if (i % 3 == 0){
+            sum = sum + i
+        }
+        if (i % 5 == 0){
+            sum = sum + i
+        }
+    }
+    return sum
+}
+
+//console.log(betterThreeFives(250,337))
+
+/*Change is inevitable (especially when breaking a twenty). 
+Make generateCoinChange(cents). 
+Accept a number of American cents, 
+compute and print how to represent that amount with the smallest number of coins. 
+Common American coins are pennies (1 cent), nickels (5 cents), 
+dimes (10 cents), and quarters (25 cents). */
+
+function generateCoinChange(cents){
+    quarters = cents / 25
+    if (cents % 25 >= 1){
+        quarters
+        console.log(quarters)
+    }
+    else{
+        console.log("No thank you")
+    }
+    
+    
+}
+
+generateCoinChange(22)
+
