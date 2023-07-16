@@ -764,17 +764,38 @@ Common American coins are pennies (1 cent), nickels (5 cents),
 dimes (10 cents), and quarters (25 cents). */
 
 function generateCoinChange(cents){
-    quarters = cents / 25
-    if (cents % 25 >= 1){
-        quarters
-        console.log(quarters)
+    let quarters = 0
+    let dimes = 0
+    let nickels = 0
+    let pennies = 0
+    for(let i = 0; i < cents; i ++){
+        if(cents >= 25){
+            cents = cents - 25
+            quarters++
+        }
     }
-    else{
-        console.log("No thank you")
+    for(let i = 0; i < cents; i ++){
+        if(cents >= 10){
+            cents = cents - 10
+            dimes++
+        }
     }
-    
+    for(let i = 0; i < cents; i ++){
+        if(cents >= 5){
+            cents = cents - 5
+            nickels++
+        }
+    }
+    console.log(cents)
+    for(let i = 0; i <= cents; i ++){
+        if(cents >= 0){
+            cents = cents - 1
+            pennies++
+        }
+    }
+    console.log("Your change is " + quarters + " quarter(s), " + dimes + " dime(s), " + nickels + " nickel(s), and " + pennies + " pennie(s).")
     
 }
 
-generateCoinChange(22)
+generateCoinChange(98)
 
