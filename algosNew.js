@@ -786,10 +786,10 @@ function generateCoinChange(cents){
             nickels++
         }
     }
-    console.log(cents)
-    for(let i = 0; i <= cents; i ++){
+    for(let i = -1; i <= cents; i++){
         if(cents >= 0){
-            cents = cents - 1
+            cents--
+            console.log(cents + " cents")
             pennies++
         }
     }
@@ -797,5 +797,26 @@ function generateCoinChange(cents){
     
 }
 
-generateCoinChange(98)
+//generateCoinChange(94)
+
+function messyMath(num){
+    sum = 0
+    for(let i = 0; i <= num; i++){
+        if(i % 3 == 0){
+            continue
+        }
+        if (i % 7 == 0){
+            sum = sum + i + i
+        }
+        if(i = 1/3 * num){
+            return -1
+        }
+        else{
+            sum = sum + i
+        }
+    }
+    return sum
+}
+
+console.log(messyMath(15))
 
