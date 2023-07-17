@@ -818,5 +818,12 @@ function messyMath(num){
     return sum
 }
 
-console.log(messyMath(15))
+//console.log(messyMath(15))
 
+function twelveBarBlues(){
+    for(let i = 1; i <13; i++){
+        console.log(i + " chick" + " boom" + " chick")
+    }
+}
+
+twelveBarBlues()
