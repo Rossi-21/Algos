@@ -826,4 +826,34 @@ function twelveBarBlues(){
     }
 }
 
-twelveBarBlues()
+//twelveBarBlues()
+
+function fibonacci(num){
+    let num2 = 0
+    for(let i = 0; i <= num; i++){
+        num2 = num2 + i
+        console.log("num2 is "+num2)
+    }
+    return num2
+}
+
+//console.log(fibonacci(2))
+
+function sumToOne(num){
+    
+    let stringNum = num.toString()
+    let sum = 0
+    for (let i = 0; i < stringNum.length; i++){
+        let x = Number(stringNum[i])
+        sum = sum + x
+    }
+    if (sum < 10){
+        console.log(sum)
+    }
+    else{
+        
+    }
+    
+}
+
+sumToOne(928)
